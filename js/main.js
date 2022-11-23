@@ -72,9 +72,9 @@ function CapturarErrorRegalo(){
 function pagina(){
     return window.location.href = 'wishlist.html'
 }
-
+let form=document.formulario;
 function ControladorDeErrores(loQueMandaElHTML){
-    let form=document.formulario;
+    
     let ArrayErrores=[CapturarErrorNombre(),
     CapturarErrorCiudad(),
     CapturarErrorRegalo()]
@@ -93,7 +93,6 @@ function ControladorDeErrores(loQueMandaElHTML){
         
     }
     
-    console.log(sinErrores)
     if (sinErrores){
         let test=document.createAttribute("hidden")
         form.setAttributeNode(test)
